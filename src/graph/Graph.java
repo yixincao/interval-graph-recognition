@@ -19,8 +19,8 @@ public class Graph {
     public int[][] adj;
 
     /*
-     *        2
-     *       / \
+     *      2
+     *     / \
      * 0--1--3--4
      */
     private static boolean[][] bull = {
@@ -33,11 +33,11 @@ public class Graph {
     public static Graph BULL = new Graph(bull);
 
     /*
-     *         0
-     *         |
-     *         1
-     *       /  \
-     * 4--2 -- 3--5
+     *      0
+     *      |
+     *      1
+     *     / \
+     * 4--2--3--5
      */
     private static int[][] net = {
         { 1 },
@@ -67,8 +67,8 @@ public class Graph {
     public static Graph SUN = new Graph(sun);
 
     /*
-     *     2
-     *     |
+     *    2
+     *    |
      * 1--0--3
      */
      private static int[][] claw = {
@@ -80,11 +80,11 @@ public class Graph {
     public static Graph CLAW = new Graph(claw);
 
     /*
-     *          6
-     *          |
-     *    2 -- 3 -- 4
-     *    |  \ | /  |
-     *    1 -- 0 -- 5     
+     *        6
+     *        |
+     *    2-- 3 --4
+     *    | \ | / |
+     *    1-- 0 --5     
      */
     private static int[][] top = {
         { 1, 2, 3, 4, 5 },
@@ -98,10 +98,10 @@ public class Graph {
     public static Graph WHIPPING_TOP = new Graph(top);
 
     /*
-     *              6
-     *              |
-     *              3
-     *              |
+     *           6
+     *           |
+     *           3
+     *           |
      * 4 -- 1 -- 0 -- 2 -- 5
      */
      private static int[][] longClaw = {
@@ -164,7 +164,7 @@ public class Graph {
     /**
      * Construct a graph out of a boolean adjacency matrix.
      *
-     * This is mainly for testing purpose: it is not linear in general.
+     * This is mainly for testing purposes: it is not linear in general.
      */
     public Graph(boolean[][] matrix) {
         this(matrix.length);
@@ -305,31 +305,21 @@ public class Graph {
      * https://users.aalto.fi/~tjunttil/bliss/fileformat.html
      * 
      * Comments:
-     * In the beginning of the file, there can be comment lines that start with the
-     * character c.
+     * In the beginning of the file, there can be comment lines that start with the character c.
      * For instance {c The constraint graph of a CNF formula}.
      * 
      * Problem definition line:
-     * After the comment lines, there must be the “problem definition line” of the
-     * form {p edge N E}.
+     * After the comment lines, there must be the “problem definition line” of the form {p edge N E}.
      * Here N is the number of vertices and E is the number of edges in the graph.
      * In the file format, the vertices are numbered from 1 to N.
      * 
      * Vertex colors:
-     * After the problem definition line, the next lines of the form {n v c} define
-     * the colors of the vertices
-     * v is the number of a vertex and c is the color of that vertex.
-     * The color c should be a non-negative integer fitting in the domain of the
-     * unsigned int type in the C++ programming language.
-     * It is not necessary to include a color definition line for each vertex, the
-     * default color for a vertex is 0.
-     * If the color of a vertex is defined more than once, the last definition
-     * applies.
+     * After the problem definition line, the next lines of the form {n v c} define the colors of the vertices v is the number of a vertex and c is the color of that vertex.
+     * The color c should be a non-negative integer fitting in the domain of the unsigned int type in the C++ programming language.
+     * It is not necessary to include a color definition line for each vertex, the default color for a vertex is 0.
+     * If the color of a vertex is defined more than once, the last definition applies.
      * 
-     * Edges. Following the color definition lines, the next E lines of the form {e
-     * v1 v2}
-     * describe the edges in the graph, where 1 ≤ v1,v2 ≤ N are the numbers of the
-     * vertices connected by the edge.
+     * Edges. Following the color definition lines, the next E lines of the form {e v1 v2} describe the edges in the graph, where 1 ≤ v1,v2 ≤ N are the numbers of the vertices connected by the edge.
      * Multiple definitions of the same edge are ignored.
      * 
      * @param the path of the graph file
