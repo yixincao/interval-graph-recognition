@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 
 /**
  * 
- * @author Yixin Cao and Liu Chenxi (May 2025)
+ * @author Yixin Cao and Chenxi Liu (May 2025)
  *
  * Simple utility functions for permutations.
  */
