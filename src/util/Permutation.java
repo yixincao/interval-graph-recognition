@@ -97,36 +97,10 @@ public class Permutation {
     }
 
     /**
-     * Random list of M non-negative integers whose sum is N
-     * 
-     * Given two integers M and N, the task is to create a list of M positive
-     * integers whose sum is N.
-     * Approach: To get a complete random list of integers, create an array of size
-     * M where every element is initialised with 1. Now run a loop from 0 to N - M
-     * -1 and increment any randomly chosen element from the array by 1 using the
-     * rand() function. This way, sum of the resultant list will be N.
-     * 
-     * https://www.geeksforgeeks.org/random-list-of-m-non-negative-integers-whose-sum-is-n/
-     * 
-     * @param m - a list of M numbers
-     * @param n - sum of n
-     * @return
-     */
-    public static int[] randomList(int m, int n) {
-        // Create an array of size m where
-        // every element is initialized to 1
-        int arr[] = new int[m];
-        Arrays.fill(arr, 1);
-
-        // To make the sum of the final list as n
-        for (int i = 0; i < n - m; i++) {
-
-            // Increment any random element
-            // from the array by 1
-            arr[(int) (Math.random() * m)]++;
-        }
-
-        return arr;
-
+     * Count sort
+       */
+    public static int[] countSortIndex(int[] a) {
+        throw new UnsupportedOperationException("Not implemented yet");
     }
+    
 }
