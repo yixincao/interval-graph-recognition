@@ -26,26 +26,20 @@ import static util.Permutation.*;
  *         References: LBFS [RTL76]; LBFS+ [RTL76]; LBFS↑ [LW14, C21]; MCS
  *         [TY84].
  *
- *         [RTL76] Donald J. Rose, Robert Endre Tarjan, and George S. Lueker.
- *         Algorithmic aspects of vertex elimination on graphs. SIAM J. Comput.,
- *         5(2):266--283, 1976. http://doi.org/10.1137/0205021
- *         [TY84] Robert Endre Tarjan and Mihalis Yannakakis. Simple linear-time
- *         algorithms to test chordality of graphs, test acyclicity of
- *         hypergraphs, and selectively reduce acyclic hypergraphs. SIAM J.
- *         Comput., 13(3):566--579, 1984. http://doi.org/10.1137/0213035
- *         [TY85] Addendum in the same journal, 14(1):254-255, 1985.
- *         http://doi.org/10.1137/0214020
- *         [LW14] Peng Li and Yaokun Wu. A four-sweep LBFS recognition algorithm
- *         for interval graphs. Discrete Math. Theor. Comput. Sci.,
- *         16(3):23--50, 2014. http://doi.org/10.46298/dmtcs.2094
- *         [C21] Yixin Cao, Recognizing (Unit) Interval Graphs by Zigzag Graph
- *         Searches, Proceedings of the 4th SIAM Symposium on Simplicity in
- *         Algorithms (SOSA), 2021, pages 92--106.
+ *         [RTL76] Rose, Donald J., Tarjan, Robert Endre and Lueker, George S..
+ *         Algorithmic aspects of vertex elimination on graphs. 
+ *         SIAM J. Comput., 5(2):266--283, 1976. http://doi.org/10.1137/0205021
+ *         [TY84] Tarjan, Robert Endre and Yannakakis, Mihalis. 
+ *         Simple linear-time algorithms to test chordality of graphs, test acyclicity of hypergraphs, and selectively reduce acyclic hypergraphs. 
+ *         SIAM J. Comput., 13(3):566--579, 1984. http://doi.org/10.1137/0213035
+ *         [TY85] Addendum in the same journal, 14(1):254-255, 1985. http://doi.org/10.1137/0214020
+ *         [LW14] Li, Peng and Wu, Yaokun. A four-sweep LBFS recognition algorithm for interval graphs. 
+ *         Discrete Math. Theor. Comput. Sci., 16(3):23--50, 2014. http://doi.org/10.46298/dmtcs.2094
+ *         [C21] Cao, Yixin, Recognizing (Unit) Interval Graphs by Zigzag Graph Searches, 
+ *         Proceedings of the 4th SIAM Symposium on Simplicity in Algorithms (SOSA), 2021, pages 92--106.
  *         http://doi.org/10.1137/1.9781611976496.11
- *         [S91] Klaus Simon. A new simple linear algorithm to recognize
- *         interval graphs. Computational Geometry - Methods, Algorithms and
- *         Applications, International Workshop on Computational Geometry CG'91,
- *         pages 289--308, 1991.
+ *         [S91] Simon, Klaus. A new simple linear algorithm to recognize interval graphs. 
+ *         Computational Geometry - Methods, Algorithms and Applications, International Workshop on Computational Geometry CG'91, pages 289--308, 1991.
  * 
  */
 public class GraphSearch {
