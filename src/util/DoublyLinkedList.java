@@ -1,6 +1,8 @@
 package util;
 
-// https://www.geeksforgeeks.org/introduction-to-doubly-linked-lists-in-java/
+/**
+ * A simple implementation of doubly linked list data structure.
+ */
 
 public class DoublyLinkedList<T> {
     public Node<T> head;
