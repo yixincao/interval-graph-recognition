@@ -219,25 +219,17 @@ public class GraphSearch {
     }
 
     /**
-     * Order of the vertices by degrees, non-decreasingly.
+     * For the recognition of unit interval graphs.
      * 
-     * @param g - graph
-     * @return vertices sorted by degree
-     */
-    public static int[] getDegreeOrder(Graph g) {
-        int[] degree = Arrays.stream(g.adj).mapToInt(a -> a.length).toArray();
-        // System.out.println("degree: " + Arrays.toString(degree));
-        return countSortIndex(degree);
-    }
-    
-    /**
-     * 
-     */
+     * @param g: graph
+     * @param endvertices: an end vertex for each component     
+     * @return an LBFS ordering that always choose a minimum-degree vertex when there are choices.
+   */
     public static int[] LBFSdelta(Graph g, int[] endVertices) {
-        // this permutation is sorted vertices by degree from small to large
         int[] degree = Arrays.stream(g.adj).mapToInt(a -> a.length).toArray();
         for (int i : endVertices)
             degree[i] = 0; // force the end vertices to be at the beginning.
+        // this permutation is sorted vertices by degree from small to large
         int[] permutation = countSortIndex(degree);
         return genericLBFS(g, permutation, false);
     }
@@ -349,8 +341,7 @@ public class GraphSearch {
                 /*
                  * Step 2.2. v ← the last vertex of σ|S;
                  * For LBFS, any vertex in the bucket is good;
-                 * For LBFSdelta, we have prepared the bucket such that the degrees are
-                 * nondecreasing.
+                 * For LBFSdelta, we have prepared the bucket such that the degrees are nondecreasing.
                  */
                 nodeV = firstBucket.head;
                 // if (DEBUG) System.out.println("i = " + i + ", v: " + nodeV.element + ": " +
